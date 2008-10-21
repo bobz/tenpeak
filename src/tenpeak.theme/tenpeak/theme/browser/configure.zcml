@@ -1,0 +1,112 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="tenpeak.theme">
+
+    <!-- We are customizing the search portlet, so make sure that it has
+         been properly loaded *before* the registrations below are effected.
+      -->
+    <include package="plone.app.portlets" />
+
+    <!-- 'Tenpeak Theme' Zope 3 skin layer 
+        Register viewlets and pages for this zope 3 skin layer
+        to make sure they only apply to the 'Tenpeak Theme' theme.
+        You can also use this layer to override default Plone browser views
+        and viewlets only within the 'Tenpeak Theme' theme.
+      -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Tenpeak Theme"
+        />
+
+    <!-- Resource directory for stylesheets -->
+    <browser:resourceDirectory
+        name="tenpeak.theme.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Resource directory for images -->
+    <browser:resourceDirectory
+        name="tenpeak.theme.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+        />
+        
+    <!-- 
+        Override the dashboard view (we want to make sure it doesn't 
+        blank out the left column). This is copied from 
+        plone.app.layout.dashboard and plone.app.portlets.browser, with the 
+        addition of the layer attribute.
+      -->
+    <browser:page
+        for="Products.CMFCore.interfaces.ISiteRoot"
+        name="dashboard"
+        permission="plone.app.portlets.ManageOwnPortlets"
+        class="plone.app.layout.dashboard.dashboard.DashboardView"
+        template="templates/dashboard.pt"
+        layer=".interfaces.IThemeSpecific"
+        />
+        
+    <browser:page
+        for="Products.CMFCore.interfaces.ISiteRoot"
+        name="manage-dashboard"
+        permission="plone.app.portlets.ManageOwnPortlets"
+        class="plone.app.portlets.browser.manage.ManageDashboardPortlets"
+        template="templates/manage-dashboard.pt"
+        layer=".interfaces.IThemeSpecific"
+        />
+    
+    <!-- 
+        Override the template for the search portlet 
+      -->
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.search.ISearchPortlet"
+        layer=".interfaces.IThemeSpecific"
+        template="templates/search_portlet.pt"
+        />
+    
+    <!-- Re-register viewlets which are normally at the top of the
+         portal, adding them to the "content views" viewlet manager,
+         at the top of the main content area. We then use GenericSetup
+         (profiles/default/viewlets.xml) to hide the viewlets in their
+         default location and order them properly in this new location.
+       -->
+       
+
+    <!-- The breadcrumbs -->
+    <browser:viewlet
+        name="tenpeak.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        layer=".interfaces.IThemeSpecific"
+        class=".viewlets.PathBarViewlet"
+        permission="zope2.View" 
+        />
+        
+    <!-- The personal bar -->
+    <browser:viewlet
+        name="tenpeak.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        layer=".interfaces.IThemeSpecific"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        permission="zope2.View" 
+        />
+<!--
+    <browser:viewlet
+	name="plone.contentviews
+	manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+	layer=".interfaces.IThemeSpecific"
+	class="plone.app.layout
+        -->
+    <!-- A custom viewlet for this theme only -->
+    <browser:viewlet
+        name="tenpeak.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        template="templates/footer.pt"
+        permission="zope2.View" 
+        />
+
+</configure>

@@ -1,0 +1,324 @@
+/* Stylesheet for the 'Tenpeak Theme' Plone theme */
+
+/* Adjust some of the basic styles
+ */
+ 
+h1, h2 {
+    border: none;
+    border-bottom: solid transparent 1px;
+}
+
+/* Give the header a uniform background color, and remove padding on the 
+   image. Float it left so that we can get the tabs to line up next to it.
+ */
+#portal-header {
+    background-color: #ddddff;
+}
+
+#portal-logo {
+    float: left;
+}
+
+#portal-logo img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Disable border on site actions */
+#portal-siteactions li a,
+#portal-siteactions li a:hover {
+    border: none;
+}
+
+#portal-siteactions li a:hover {
+    background-color: transparent;
+    color: #ff9900;
+    text-decoration: underline;
+}
+
+/* Make sure tabs bottom align with the image
+ */
+#portal-globalnav {
+    padding-top: 50px;
+    font-size: 12px;
+    padding-bottom: 5px;
+    margin: 0;
+    border: none;
+//    background-color: Black;
+}
+
+/* Change the highlighted/selected style
+ */
+#portal-globalnav li a,
+#portal-globalnav li.selected a,
+#portal-globalnav li a:hover {
+    
+    color: #000066;
+    background-color: transparent;
+    
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: dotted #fe9900 1px;
+    
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Add border in-between tabs, but disable border on the first element ("Home")
+ */
+#portal-globalnav li.selected a,
+#portal-globalnav li a:hover {
+    color: #fe9900;
+}
+
+-
+#portaltab-index_html a {
+    border-left: none !important;
+}
+
+/* Let the left column be wide enough to incorporate its background and
+   apply it as a background image. This is set in base_properties.props
+ */
+ 
+#portal-column-one {
+/*    background-image: url(++resource++tenpeak.theme.images/column-one-bg.jpg);
+*/
+    background-position: top-left;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+    padding-top: 10px;
+}
+
+
+/* Breadcrumbs
+ */
+#portal-breadcrumbs {
+    border-bottom: none;
+    text-transform: none;
+    padding-left: 0;
+    font-weight: bold;
+}
+
+#breadcrumbs-home {
+    color: white;
+}
+
+#breadcrumbs-home:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.breadcrumbItem,
+.breadcrumbItem a {
+    color: #fe9900;    
+}
+
+.breadcrumbItem a:hover {
+    color: #fe9900;    
+    text-decoration: underline !important;
+}
+
+/* The personal links bar
+ */
+ 
+#portal-personaltools {
+    background: none;
+    border: none;
+    text-transform: none;
+}
+
+#portal-personaltools li a {
+    text-decoration: none;
+    color: ccccff;
+    border-bottom: none;
+}
+
+/* Content views (tabs)
+ */
+ 
+.actionMenu .actionMenuContent li a:hover {
+    color: #ffffff;
+}
+
+/* We use different styles for portlets in the left and right columns. These
+  ones are on the left
+ */
+ 
+#portal-column-one .portlet {
+    position: relative;
+    border: none;
+    background-color: transparent;
+}
+
+#portal-column-one .portletTopLeft {
+    height: 8px;
+    width: 2px;
+    border: none;
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    background: transparent url(++resource++tenpeak.theme.images/portlet-left-tl.jpg) top left no-repeat;
+}
+
+#portal-column-one .portletHeader {
+    background: #f0f0f0;
+    border: none;
+    text-transform: none;
+    color: #fe9900;
+    font-weight: bold;
+}
+
+#portal-column-one .portletHeader a {
+    color: #fe9900;
+    font-weight: bold;
+}
+
+#portal-column-one .portletItem {
+    border: none;
+    margin-right: 10px;
+}
+
+#portal-column-one .portletItem.even {
+    background-color: #e7e7e7;
+}
+
+#portal-column-one .portletFooter {
+    border: none;
+    background-color: transparent;
+}
+
+/* Style the navigation portlet */
+
+#portal-column-one .portletNavigationTree .portletItem {
+    padding-left: 0.5em;
+}
+
+#portal-column-one .portletNavigationTree .navTreeItem a {
+    font-size: 11px;
+    padding: 0 0 4px 4px;
+}
+
+#portal-column-one .portletNavigationTree .navTreeItem a,
+#portal-column-one .portletNavigationTree .navTreeCurrentItem {
+    border: none !important;
+    color: black !important
+}
+
+#portal-column-one .portletNavigationTree .navTreeCurrentItem {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#portal-column-one .portletNavigationTree .navTreeItem img {
+    display: none;
+}
+
+/* Style the search portlet */
+#portal-column-one .portletSearch .LSBox {
+    float: none;
+    padding: 0;
+}
+
+#portal-column-one .portletSearch .LSBox input {
+    width: 100%;
+}
+
+#portal-column-one .portletSearch .LSResult {
+    position: relative;
+    top: 20px;
+    left: 205px;
+}
+
+/* We use different styles for portlets in the left and right columns. These
+  ones are on the right
+ */
+
+/* This makes the rounded corners work properly */
+#portal-column-two .portlet {
+    position: relative;
+    border: none;
+    background: #b7b7b7;
+}
+
+#portal-column-two .portlet a {
+    color: black;
+    text-decoration: underline;
+}
+
+#portal-column-two .portletItemDetails {
+    text-align: left;
+}
+
+#portal-column-two .portletItem.even {
+    background: #e7e7e7;
+}
+
+#portal-column-two .portletHeader {
+    color: white;
+    text-align: right;
+    font: bold;
+    font-size: 14px;
+    text-transform: none;
+    background: #4c4c4c;
+    border-bottom: solid #ff944c 4px;
+}
+
+#portal-column-two .portletHeader a {
+    color: white;
+    text-align: right;
+    font: bold;
+    font-size: 14px;
+    text-transform: none;
+    text-decoration: none;
+}
+
+#portal-column-two .portletFooter {
+    color: white;
+    background: #b7b7b7;
+    border: none;
+}
+
+#portal-column-two .portletTopLeft {
+    height: 6px;
+    width: 6px;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent url(++resource++tenpeak.theme.images/portlet-tl.jpg) top left no-repeat;
+}
+
+#portal-column-two .portletTopRight {
+    height: 6px;
+    width: 6px;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent url(++resource++tenpeak.theme.images/portlet-tr.jpg) top left no-repeat;
+}
+
+#portal-column-two .portletBottomLeft {
+    height: 6px;
+    width: 6px;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: transparent url(++resource++tenpeak.theme.images/portlet-bl.jpg) top left no-repeat;
+}
+
+#portal-column-two .portletBottomRight {
+    height: 6px;
+    width: 6px;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: transparent url(++resource++tenpeak.theme.images/portlet-br.jpg) top left no-repeat;
+}

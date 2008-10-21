@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: tenpeak.theme
+Version: 1.0dev
+Summary: Tenpeak theme for Plone 3.0
+Home-page: http://svn.plone.org/svn/collective/
+Author: Brendon Bobzin
+Author-email: bobzin44@gmail.com
+License: GPL
+Description: Introduction
+        ============
+        
+        An installable theme that customizes the look and feel of the Tenpeak Plone 3.0 site.  Developed by Brendon Bobzin in 2008.
+        
+        Changelog
+        =========
+        
+        1.0 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Keywords: web zope plone theme
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

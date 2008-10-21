@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration of the viewlet managers
+     for the "Tenpeak Theme" skin.
+     -->
+
+<object>
+
+  <!-- Top of the page -->
+  <order manager="plone.portaltop" skinname="Tenpeak Theme" based-on="Plone Default">
+    <viewlet name="plone.header" />
+  </order>
+  
+  <hidden manager="plone.portaltop" skinname="Tenpeak Theme">
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+  </hidden>
+  
+  <!-- Header - contained within plone.portaltop -->
+  <order manager="plone.portalheader" skinname="Tenpeak Theme" based-on="Plone Default">
+    <viewlet name="plone.skip_links" />
+    <viewlet name="plone.site_actions" />
+    <viewlet name="plone.logo" />
+    <viewlet name="plone.global_sections" />
+<!--
+    <viewlet name="tenpeak.path_bar" />
+    <viewlet name="tenpeak.personal_bar" />
+-->
+  </order>
+  <hidden manager="plone.portalheader" skinname="Tenpeak Theme">
+    <viewlet name="plone.searchbox" />
+  </hidden>
+
+
+  <!-- Above content -->
+  <order manager="plone.contentviews" skinname="Tenpeak Theme" based-on="Plone Default">
+    <viewlet name="tenpeak.path_bar" />
+    <viewlet name="tenpeak.personal_bar" />
+    <viewlet name="plone.contentviews" />
+    <viewlet name="plone.contentactions" />
+  </order>
+  
+  <!-- Below the title of a document -->
+  <hidden manager="plone.belowcontenttitle" skinname="Tenpeak Theme">
+      <viewlet name="plone.belowcontenttitle.documentbyline" />
+  </hidden>
+  
+  <!-- Above the body of a document -->
+  <hidden manager="plone.abovecontentbody" skinname="Tenpeak Theme">
+      <viewlet name="plone.presentation" />
+  </hidden>
+  
+  <!-- Footer -->
+  <order manager="plone.portalfooter" skinname="Tenpeak Theme" based-on="Plone Default">
+    <viewlet name="tenpeak.footer" />
+    <viewlet name="plone.colophon" />
+  </order>
+  
+  <hidden manager="plone.portalfooter" skinname="Tenpeak Theme">
+    <viewlet name="plone.footer" />
+  </hidden>
+
+</object>

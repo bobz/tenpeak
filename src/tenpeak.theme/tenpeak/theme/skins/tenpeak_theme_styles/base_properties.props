@@ -1,0 +1,47 @@
+title:string="Tenpeak Theme's color, font, logo and border defaults"
+
+plone_skin:string=Tenpeak Theme
+
+logoName:string=tenpeak-logo.png
+
+fontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+fontBaseSize:string=69%
+fontColor:string=#ccccff
+fontSmallSize:string=85%
+
+backgroundColor:string=#000030
+
+linkColor:string=#436976
+linkActiveColor:string=#ff9900
+linkVisitedColor:string=#ffccff
+
+borderWidth:string=1px
+borderStyle:string=solid
+borderStyleAnnotations:string=dashed
+
+globalBorderColor:string=#ff9900
+globalBackgroundColor:string=#000030
+globalFontColor:string=#ccccff
+
+headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+
+contentViewBorderColor:string=#000020
+contentViewBackgroundColor:string=#000010
+contentViewFontColor:string=#ccccff
+
+inputFontColor:string=#ffffff
+
+textTransform:string=lowercase
+
+evenRowBackgroundColor:string=#000000 
+oddRowBackgroundColor:string=transparent
+
+notifyBorderColor:string=#ffa500
+notifyBackgroundColor:string=#ffce7b
+
+discreetColor:string=#76797c
+helpBackgroundColor:string=#ffffe1
+
+portalMinWidth:string=70em
+columnOneWidth:string=155px
+columnTwoWidth:string=16em

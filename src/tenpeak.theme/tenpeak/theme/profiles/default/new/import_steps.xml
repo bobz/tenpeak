@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="optilux.theme.various"
+               version="20070909-01"
+               handler="optilux.theme.setuphandlers.setupVarious"
+               title="Optilux Theme: miscellaneous import steps">
+    <dependency step="skins" />
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>

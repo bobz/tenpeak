@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration of the viewlet managers
+     for the "Optilux Theme" skin.
+     -->
+
+<object>
+
+  <!-- Top of the page -->
+  <order manager="plone.portaltop" skinname="Optilux Theme" based-on="Plone Default">
+    <viewlet name="plone.header" />
+  </order>
+  
+  <hidden manager="plone.portaltop" skinname="Optilux Theme">
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+    <viewlet name="plone.path_bar" />
+    <viewlet name="plone.personal_bar" />
+  </hidden>
+  
+  <!-- Header - contained within plone.portaltop -->
+  <order manager="plone.portalheader" skinname="Optilux Theme" based-on="Plone Default">
+    <viewlet name="plone.skip_links" />
+    <viewlet name="plone.site_actions" />
+    <viewlet name="plone.logo" />
+    <viewlet name="plone.global_sections" />
+  </order>
+  
+  <hidden manager="plone.portalheader" skinname="Optilux Theme">
+    <viewlet name="plone.searchbox" />
+  </hidden>
+  
+  <!-- Above content -->
+  <order manager="plone.contentviews" skinname="Optilux Theme" based-on="Plone Default">
+    <viewlet name="optilux.path_bar" />
+    <viewlet name="optilux.personal_bar" />
+    <viewlet name="plone.contentviews" />
+    <viewlet name="plone.contentactions" />
+  </order>
+  
+  <!-- Below the title of a document -->
+  <hidden manager="plone.belowcontenttitle" skinname="Optilux Theme">
+      <viewlet name="plone.belowcontenttitle.documentbyline" />
+  </hidden>
+  
+  <!-- Above the body of a document -->
+  <hidden manager="plone.abovecontentbody" skinname="Optilux Theme">
+      <viewlet name="plone.presentation" />
+  </hidden>
+  
+  <!-- Footer -->
+  <order manager="plone.portalfooter" skinname="Optilux Theme" based-on="Plone Default">
+    <viewlet name="optilux.footer" />
+    <viewlet name="plone.colophon" />
+  </order>
+  
+  <hidden manager="plone.portalfooter" skinname="Optilux Theme">
+    <viewlet name="plone.footer" />
+  </hidden>
+
+</object>

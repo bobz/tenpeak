@@ -1,0 +1,34 @@
+<dl class="portlet portletSearch"
+    i18n:domain="plone">
+
+  <dt class="portletHeader">
+      <span class="portletTopLeft"></span>
+      <a class="tile"
+         tal:attributes="href view/search_form"
+         i18n:translate="box_search">Search</a>
+      <span class="portletTopRight"></span>
+  </dt>
+
+  <dd class="portletItem odd">
+    <form name="searchform" action="search"
+          tal:define="livesearch view/enable_livesearch;"
+          tal:attributes="action view/search_action">
+      <div class="LSBox">
+        <input class="portlet-search-gadget"
+            name="SearchableText"
+            type="text"
+            size="15"
+            title="Enter search query"
+            i18n:attributes="title title_search_title;"
+            tal:attributes="value request/SearchableTest|nothing;
+                            class python:livesearch and 'inputLabel portlet-search-gadget' or 'inputLabel portlet-search-gadget-nols'"
+            class="inputLabel" />
+        <div class="LSResult" style="" tal:condition="livesearch">
+          <div class="LSShadow"></div>
+        </div>
+      </div>
+    </form>
+
+    <dd class="portletFooter">
+  </dd>
+</dl>

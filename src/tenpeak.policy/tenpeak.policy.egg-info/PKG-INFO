@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: tenpeak.policy
+Version: 0.1dev
+Summary: Tenpeak Policy
+Home-page: http://www.tenpeak.com/
+Author: bobz
+Author-email: bobz.admin@gmail.com
+License: GPL
+Description: Introduction
+        ============
+        
+        This package sets up the Tenpeak web site defaults
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Keywords: tenpeak men women dating relationships
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
