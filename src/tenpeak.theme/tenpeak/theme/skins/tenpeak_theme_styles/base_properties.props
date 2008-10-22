@@ -6,10 +6,10 @@ logoName:string=tenpeak-logo.png
 
 fontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 fontBaseSize:string=69%
-fontColor:string=#ccccff
+fontColor:string=#99aaee
 fontSmallSize:string=85%
 
-backgroundColor:string=#000030
+backgroundColor:string=#000019
 
 linkColor:string=#436976
 linkActiveColor:string=#ff9900
@@ -27,9 +27,9 @@ headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, san
 
 contentViewBorderColor:string=#000020
 contentViewBackgroundColor:string=#000010
-contentViewFontColor:string=#ccccff
+contentViewFontColor:string=#8888DD
 
-inputFontColor:string=#ffffff
+inputFontColor:string=#000050
 
 textTransform:string=lowercase
 
@@ -40,7 +40,7 @@ notifyBorderColor:string=#ffa500
 notifyBackgroundColor:string=#ffce7b
 
 discreetColor:string=#76797c
-helpBackgroundColor:string=#ffffe1
+helpBackgroundColor:string=#dfdfff
 
 portalMinWidth:string=70em
 columnOneWidth:string=155px
